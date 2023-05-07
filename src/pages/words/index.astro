@@ -37,8 +37,8 @@ const posts = await Astro.glob('./*.md')
 					{
 						posts.map((post) => (
 							<li>
-								{post.data.pubDate && <time> {post.data.pubDate} </time> }
-								<a href={`/words/${post.slug}/`}>{post.data.title}</a>
+								{post.frontmatter.pubDate && <time> {post.frontmatter.pubDate} </time> }
+								<a href={`/words/${post.url}/`}>{post.frontmatter.title}</a>
 							</li>
 						))
 					}
