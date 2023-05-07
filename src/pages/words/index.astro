@@ -2,8 +2,7 @@
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
-import FormattedDate from '../../components/FormattedDate.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../config';
 
 const posts = (await Astro.glob('./*.md')).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
@@ -40,7 +39,7 @@ const posts = (await Astro.glob('./*.md')).sort(
 					{
 						posts.map((post) => (
 							<li>
-								<FormattedDate date={post.data.pubDate} />
+								{post.data.pubDate && <time> {post.data.pubDate} </time> }
 								<a href={`/words/${post.slug}/`}>{post.data.title}</a>
 							</li>
 						))
