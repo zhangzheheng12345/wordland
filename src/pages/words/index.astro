@@ -34,7 +34,8 @@ const posts = await Astro.glob('./*.md')
 		<main>
 		  <h1>文章列表</h1>
 			<br/>
-			<p>梭罗的小屋 只是面朝大海</p>
+			<p>我搭建梭罗的小屋</p>
+			<p>只是面朝大海</p>
 			<br/>
 			<section>
 				<ul>
@@ -43,6 +44,8 @@ const posts = await Astro.glob('./*.md')
 							<li style="margin: 10px; padding: 5px;">
 								{post.frontmatter.pubDate && <time> {post.frontmatter.pubDate} </time> }
 								<a href={post.url}>{post.frontmatter.title}</a>
+								<br/>
+								<span style="margin-left: 15px;">{post.frontmatter.description}</span>
 							</li>
 						))
 					}
