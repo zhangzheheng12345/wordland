@@ -2,7 +2,6 @@
 layout: ../layouts/BlogPost.astro
 title: 文字岛 | Wordland 🏝️📜
 description: 在繁华的世界里 找寻文字的痕迹
-pubDate: 2023/5/7
 ---
 
 *在繁华的世界里*
