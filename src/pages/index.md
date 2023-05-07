@@ -1,7 +1,5 @@
 ---
 layout: ../layouts/BlogPost.astro
-title: Hello!
-description: Main Page
+title: 文字岛
+description: 文字的岛屿 在浪中静止
 ---
-
-# 文字岛 / Wordland
