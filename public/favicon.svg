@@ -1,5 +1,6 @@
 <svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 30 30" width="100%" xmlns="http://www.w3.org/2000/svg">
-<g id="layer-1">
+<g>
+<path d="M0 0L30 0L30 30L0 30L0 0Z" fill="#f3efac" fill-rule="nonzero" opacity="1" stroke="none"/>
 <path d="M0 0L14 0C14 0 25.534 3.1414 25.6776 7.50554C25.8212 11.8697 15.4995 12.7226 15.2731 15.6844C15.0467 18.6462 22.8743 20.5809 22.3663 23.7583C21.8584 26.9356 16 30 16 30L0 30L0 0Z" fill="#3273dc" fill-rule="nonzero" opacity="1" stroke="none"/>
 </g>
 </svg>
