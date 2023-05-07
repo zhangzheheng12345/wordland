@@ -4,7 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../config';
 
-const posts = await Astro.glob('./*.md')
+const posts = (await Astro.glob('./*.md')).sort((a, b) => a.frontmatter.pubDate.valueOf() >= b.frontmatter.pubDate.valueOf())
 ---
 
 <!DOCTYPE html>
