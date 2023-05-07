@@ -18,6 +18,6 @@ description: 在繁华的世界里 找寻文字的痕迹
 
 <br/>
 
-文章列表 [文📜](/words)
+[文章列表](/words)
 
-法律声明 [声明📃](/declarations)
+[法律声明](/declarations)
