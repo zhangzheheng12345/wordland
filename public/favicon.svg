@@ -1,9 +1,5 @@
-<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 30 30" width="100%"
-xmlns="http://www.w3.org/2000/svg">
-<clipPath id="ArtboardFrame">
-<rect height="30" width="30" x="0" y="0"/>
-</clipPath>
-<g clip-path="url(#ArtboardFrame)" id="图层-1">
-<path d="M0 0C0 0 10.1456-4.35313 14 0C17.8544 4.35313 25.1033 4.20303 24.9522 8.65407C24.8011 13.1051 16.5448 13.8362 15.9985 16.7725C15.4521 19.7087 21.5385 20.4043 21.3387 24.0907C21.1389 27.7772 17.061 27.2573 16 30C14.939 32.7427 0 30 0 30L0 0Z" fill="#3273dc" fill-rule="nonzero" opacity="1" stroke="none"/>
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 30 30" width="100%" xmlns="http://www.w3.org/2000/svg">
+<g id="layer-1">
+<path d="M0 0L14 0C14 0 25.534 3.1414 25.6776 7.50554C25.8212 11.8697 15.4995 12.7226 15.2731 15.6844C15.0467 18.6462 22.8743 20.5809 22.3663 23.7583C21.8584 26.9356 16 30 16 30L0 30L0 0Z" fill="#3273dc" fill-rule="nonzero" opacity="1" stroke="none"/>
 </g>
 </svg>
