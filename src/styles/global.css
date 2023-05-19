@@ -1,23 +1,18 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
-
 main {
   min-height: 90vh;
 }
 img.cover {
-  border-radius: 7px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   margin-bottom: 25px;
+  border-radius: 7px;
 }
 time {
   font-style: italic;
 }
 
 body {
-  font-family: Verdana, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-family: Verdana, "PingFang SC", "Hiragino Sans GB", "Heiti SC",
+    "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   margin: auto;
   padding: 20px;
   max-width: 65ch;
@@ -78,4 +73,8 @@ blockquote {
   padding: 2px 0px 2px 20px;
   margin: 0px;
   font-style: italic;
+}
+nav {
+  border: 3px solid #222;
+  border-radius: 7px;
 }

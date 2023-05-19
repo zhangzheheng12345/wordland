@@ -1,0 +1,33 @@
+---
+import BasePage from "./BasePage.astro";
+import { AUTHORS } from "../config";
+
+export interface Props {
+  content: {
+    title: string;
+    description: string;
+    pubDate: string;
+    author?: string;
+    heroImage?: string;
+  };
+}
+
+const {
+  content: { title, description, pubDate, author, heroImage },
+} = Astro.props;
+---
+
+<BasePage title={title} description={description}>
+  {
+    heroImage && (
+      <img width={720} height={360} src={heroImage} alt="" class="cover" />
+    )
+  }
+  <h1 class="text-2em m-0.25em ml-0 mr-0">
+    {title}
+  </h1>
+  <time>{pubDate}</time>
+  <span>{author && `| ${author && AUTHORS[author].cnName} ✏️`}</span>
+  <slot />
+  <div class="text-center text-2.35em mt-65px">🏝️</div>
+</BasePage>

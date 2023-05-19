@@ -1,0 +1,22 @@
+---
+import BasePage from "./BasePage.astro";
+
+export interface Props {
+  content: {
+    title;
+    string;
+    description: string;
+  };
+}
+
+const {
+  content: { title, description },
+} = Astro.props;
+---
+
+<BasePage title={title} description={description}>
+  <h1 class="text-2em m-0.25em ml-0 mr-0">
+    {title}
+  </h1>
+  <slot />
+</BasePage>

@@ -11,7 +11,10 @@ const posts = (await Astro.glob("./*.md")).sort((a, b) =>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <BaseHead title="文章列表 | 文字岛 🏝️" description="我搭建梭罗的小屋 只是面朝大海" />
+    <BaseHead
+      title="文章列表 | 文字岛 🏝️"
+      description="我搭建梭罗的小屋 只是面朝大海"
+    />
     <style>
       ul {
         list-style-type: none;
@@ -40,8 +43,8 @@ const posts = (await Astro.glob("./*.md")).sort((a, b) =>
       <section>
         <ul>
           {
-            posts.map((post) => (
-              <li style="margin: 10px; padding: 5px;">
+            posts.map((post, index) => (
+              <li class="p-5px m-10px">
                 {post.frontmatter.pubDate && (
                   <time> {post.frontmatter.pubDate} </time>
                 )}
