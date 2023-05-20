@@ -27,7 +27,7 @@ const {
     {title}
   </h1>
   <time>{pubDate}</time>
-  <span>{`| ${author && AUTHORS[author].cnName} ✏️`}</span>
+  <p>{`✏️ ${author && AUTHORS[author].cnName}`}</p>
   <slot />
   <div class="text-center text-2.35em mt-65px">🏝️</div>
 </BasePage>
