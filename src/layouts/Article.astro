@@ -7,7 +7,7 @@ export interface Props {
     title: string;
     description: string;
     pubDate: string;
-    author?: string;
+    author: string;
     heroImage?: string;
   };
 }
@@ -17,7 +17,7 @@ const {
 } = Astro.props;
 ---
 
-<BasePage title={title} description={description}>
+<BasePage title={title} description={description} image={heroImage}>
   {
     heroImage && (
       <img width={720} height={360} src={heroImage} alt="" class="cover" />
@@ -27,7 +27,7 @@ const {
     {title}
   </h1>
   <time>{pubDate}</time>
-  <span>{author && `| ${author && AUTHORS[author].cnName} ✏️`}</span>
+  <span>{`| ${author && AUTHORS[author].cnName} ✏️`}</span>
   <slot />
   <div class="text-center text-2.35em mt-65px">🏝️</div>
 </BasePage>
