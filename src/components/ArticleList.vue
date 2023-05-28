@@ -26,10 +26,13 @@ const props = defineProps<{
 <style scoped>
 ul {
   list-style-type: none;
+  padding: unset;
 }
 ul li {
   display: flex;
-  flex: 0 0 130px;
+}
+ul li * {
+  flex-basis: 130px;
 }
 ul li a {
   font-weight: bold;

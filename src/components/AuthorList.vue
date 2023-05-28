@@ -1,6 +1,6 @@
 <template>
-  <div v-for="author in AUTHORS" class="p-20px">
-    <h2>{{ author.cnName }}</h2>
+  <div v-for="author in AUTHORS" class="p-20px mb-10px">
+    <h2 class="text-1.4em m-0">{{ author.cnName }}</h2>
     <p class="ml-10px">
       <i>{{ author.email }}</i>
     </p>
