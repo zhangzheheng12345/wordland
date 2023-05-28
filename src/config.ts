@@ -6,4 +6,8 @@ export const AUTHORS = {
     cnName: '张又左',
     email: 'zhangzheheng12345@163.com',
   },
+  'Yanru Chen': {
+    cnName: '陈晏如',
+    email: '',
+  },
 };
