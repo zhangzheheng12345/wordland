@@ -11,10 +11,10 @@
 <script setup lang="ts">
 const props = defineProps<{
   articles: Array<{
-    title: string,
-    url: string,
-    pubDate: string,
-    author: string,
+    title: string
+    url: string
+    pubDate: string
+    author: string
     description: string
   }>
 }>()
