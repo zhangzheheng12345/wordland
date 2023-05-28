@@ -2,11 +2,11 @@
   <ul>
     <li class="p-10px mb-20px items-center flex flex-wrap" v-for="article in props.articles">
       <time class="mr-10px">{{ article.pubDate }}</time>
-      <a :href="article.url" class="text-1.1em">{{ article.title }}</a>
+      <a :href="article.url" class="text-1.25em">{{ article.title }}</a>
       <div class="w-100%"></div>
       <span class="ml-5px">✏️ {{ AUTHORS[article.author].cnName }}</span>
       <div class="w-100%"></div>
-      <i class="ml-10px">{{ article.description }}</i>
+      <i class="m-5px ml-20px">{{ article.description }}</i>
     </li>
   </ul>
 </template>
@@ -25,6 +25,9 @@ const props = defineProps<{
 </script>
 
 <style scoped>
+time {
+  font-style: none;
+}
 ul {
   list-style-type: none;
   padding: unset;
