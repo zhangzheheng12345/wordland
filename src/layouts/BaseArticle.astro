@@ -1,17 +1,17 @@
 ---
-import BasePage from "./BasePage.astro";
+import BasePage from './BasePage.astro'
 
 export interface Props {
   content: {
-    title;
-    string;
-    description: string;
-  };
+    title
+    string
+    description: string
+  }
 }
 
 const {
-  content: { title, description },
-} = Astro.props;
+  content: { title, description }
+} = Astro.props
 ---
 
 <BasePage title={title} description={description}>

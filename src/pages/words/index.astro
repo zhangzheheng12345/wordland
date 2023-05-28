@@ -1,60 +1,28 @@
 ---
-import BaseHead from "../../components/BaseHead.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
+import BasePage from '../../layouts/BasePage.astro'
+import ArticleList from '../../components/ArticleList.vue'
 
-const posts = (await Astro.glob("./*.md")).sort((a, b) =>
+const posts = (await Astro.glob('./*.md')).sort((a, b) =>
   a.frontmatter.pubDate <= b.frontmatter.pubDate ? 1 : -1
-);
+)
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <BaseHead
-      title="文章列表 | 文字岛 🏝️"
-      description="我搭建梭罗的小屋 只是面朝大海"
-    />
-    <style>
-      ul {
-        list-style-type: none;
-        padding: unset;
+<BasePage title="文章列表📜" description="我搭建梭罗的小屋 只是面朝大海">
+  <h1>文章列表📜</h1>
+  <br />
+  <p><i>我搭建梭罗的小屋</i></p>
+  <p><i>只是面朝大海</i></p>
+  <br />
+  <ArticleList
+    client:idle
+    articles={posts.map((post) => {
+      return {
+        title: post.title,
+        url: post.url,
+        pubDate: post.pubDate,
+        author: post.author,
+        description: post.description
       }
-      ul li {
-        display: flex;
-      }
-      ul li :global(time) {
-        flex: 0 0 130px;
-        color: #595959;
-      }
-      ul li a {
-        font-weight: bold;
-      }
-    </style>
-  </head>
-  <body>
-    <Header />
-    <main>
-      <h1>文章列表📜</h1>
-      <br />
-      <p><i>我搭建梭罗的小屋</i></p>
-      <p><i>只是面朝大海</i></p>
-      <br />
-      <section>
-        <ul>
-          {
-            posts.map((post, index) => (
-              <li class="p-5px m-10px">
-                {post.frontmatter.pubDate && (
-                  <time> {post.frontmatter.pubDate} </time>
-                )}
-                <a href={post.url}>{post.frontmatter.title}</a>
-              </li>
-            ))
-          }
-        </ul>
-      </section>
-    </main>
-    <Footer />
-  </body>
-</html>
+    })}
+  />
+</BasePage>

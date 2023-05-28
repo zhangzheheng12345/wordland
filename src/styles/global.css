@@ -11,8 +11,8 @@ time {
 }
 
 body {
-  font-family: Verdana, "PingFang SC", "Hiragino Sans GB", "Heiti SC",
-    "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-family: Verdana, 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC',
+    'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
   margin: auto;
   padding: 20px;
   max-width: 65ch;

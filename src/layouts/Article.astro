@@ -1,20 +1,20 @@
 ---
-import BasePage from "./BasePage.astro";
-import { AUTHORS } from "../config";
+import BasePage from './BasePage.astro'
+import { AUTHORS } from '../config'
 
 export interface Props {
   content: {
-    title: string;
-    description: string;
-    pubDate: string;
-    author: string;
-    heroImage?: string;
-  };
+    title: string
+    description: string
+    pubDate: string
+    author: string
+    heroImage?: string
+  }
 }
 
 const {
-  content: { title, description, pubDate, author, heroImage },
-} = Astro.props;
+  content: { title, description, pubDate, author, heroImage }
+} = Astro.props
 ---
 
 <BasePage title={title} description={description} image={heroImage}>
@@ -28,7 +28,7 @@ const {
   </h1>
   <time>{pubDate}</time>
   <p><i>{`✏️ ${author && AUTHORS[author].cnName}`}</i></p>
-  <br/>
+  <br />
   <slot />
   <div class="text-center text-2.35em mt-65px">🏝️</div>
 </BasePage>
