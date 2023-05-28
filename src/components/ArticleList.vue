@@ -5,7 +5,7 @@
       <a :href="article.url">{{ article.title }}</a>
       <span>{{ AUTHORS[article.author].cnName }}</span>
       <div class="w-100%"></div>
-      <i>{{ article.description }}</i>
+      <i class="ml-5px">{{ article.description }}</i>
     </li>
   </ul>
 </template>
@@ -29,7 +29,7 @@ ul {
 }
 ul li {
   display: flex;
-  flex-basis: 130px;
+  flex: 0 0 130px;
 }
 ul li a {
   font-weight: bold;

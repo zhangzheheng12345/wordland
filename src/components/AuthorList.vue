@@ -1,6 +1,6 @@
 <template>
-  <div v-for="author in AUTHORS" class="p-5px m-10px">
-    <h3>{{ author.cnName }}</h3>
+  <div v-for="author in AUTHORS" class="p-20px">
+    <h2>{{ author.cnName }}</h3>
     <p class="ml-10px">
       <i>{{ author.email }}</i>
     </p>
@@ -12,9 +12,6 @@ import { AUTHORS } from '../config'
 </script>
 
 <style scoped>
-ul {
-  list-style-type: none;
-}
 div {
   border: 2px solid #222;
   border-radius: 5px;

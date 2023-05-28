@@ -8,6 +8,6 @@ export const AUTHORS = {
   },
   'Yanru Chen': {
     cnName: '陈晏如',
-    email: ''
+    email: '/'
   }
 }
