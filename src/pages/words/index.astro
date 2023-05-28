@@ -17,11 +17,11 @@ const posts = (await Astro.glob('./*.md')).sort((a, b) =>
     client:idle
     articles={posts.map((post) => {
       return {
-        title: post.title,
-        url: post.url,
-        pubDate: post.pubDate,
-        author: post.author,
-        description: post.description
+        title: post.frontmatter.title,
+        url: post.frontmatter.url,
+        pubDate: post.frontmatter.pubDate,
+        author: post.frontmatter.author,
+        description: post.frontmatter.description
       }
     })}
   />
