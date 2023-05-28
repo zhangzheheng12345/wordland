@@ -3,12 +3,13 @@
     <li class="p-5px m-10px flex-wrap" v-for="article in props.articles">
       <time>{{ article.pubDate }}</time>
       <a :href="article.url">{{ article.title }}</a>
-      <i>{{ article.author }}</i>
+      <i>{{ AUTHORS[article.author].cnName }}</i>
     </li>
   </ul>
 </template>
 
 <script setup lang="ts">
+import { AUTHORS } from '../config'
 const props = defineProps<{
   articles: Array<{
     title: string

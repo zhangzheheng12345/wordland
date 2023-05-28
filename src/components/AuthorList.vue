@@ -1,15 +1,14 @@
 <template>
   <ul>
-    <li v-for="author in AUTHORS">
-      <p>
-        <strong>{{ author.cnName }}</strong> {{ author.email }}
-      </p>
+    <li v-for="author in AUTHORS" class="p-5px m-10px flex-wrap">
+      <h3>{{ author.cnName }}</h3>
+      <p class="ml-10px"><i>{{ author.email }}</i></p>
     </li>
   </ul>
 </template>
 
 <script setup lang="ts">
-import {AUTHORS} from '../config'
+import { AUTHORS } from '../config'
 </script>
 
 <style scoped>
