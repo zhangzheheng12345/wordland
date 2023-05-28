@@ -5,7 +5,7 @@
       <a :href="article.url">{{ article.title }}</a>
       <span>{{ AUTHORS[article.author].cnName }}</span>
       <div class="w-100%"></div>
-      <i>{{ article.description }} </i>
+      <i>{{ article.description }}</i>
     </li>
   </ul>
 </template>
