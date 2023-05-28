@@ -1,9 +1,10 @@
 <template>
-    <div v-for="author in AUTHORS" class="p-5px m-10px">
-      <h3>{{ author.cnName }}</h3>
-      <p class="ml-10px"><i>{{ author.email }}</i></p>
-    </div>
-  </ul>
+  <div v-for="author in AUTHORS" class="p-5px m-10px">
+    <h3>{{ author.cnName }}</h3>
+    <p class="ml-10px">
+      <i>{{ author.email }}</i>
+    </p>
+  </div>
 </template>
 
 <script setup lang="ts">
