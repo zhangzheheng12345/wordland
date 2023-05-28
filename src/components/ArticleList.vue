@@ -32,7 +32,7 @@ ul li {
   display: flex;
 }
 ul li * {
-  flex-basis: 130px;
+  min-width: 85px;
 }
 ul li a {
   font-weight: bold;
