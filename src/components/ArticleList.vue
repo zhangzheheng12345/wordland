@@ -1,8 +1,8 @@
 <template>
   <ul>
-    <li class="p-5px m-10px flex-wrap" v-for="article in props.articles">
+    <li class="p-5px m-10px flex flex-wrap" v-for="article in props.articles">
       <time>{{ article.pubDate }}</time>
-      <a :href="article.url">{{ article.title }}</a>
+      <a :href="article.url" class="min-w-70px">{{ article.title }}</a>
       <span>{{ AUTHORS[article.author].cnName }}</span>
       <div class="w-100%"></div>
       <i class="ml-5px">{{ article.description }}</i>
@@ -28,12 +28,10 @@ ul {
   list-style-type: none;
   padding: unset;
 }
-ul li {
-  display: flex;
-}
-ul li * {
-  min-width: 85px;
-}
+  ul li * {
+    margin: 5px;
+    margin-right: 10px;
+  }
 ul li a {
   font-weight: bold;
 }
