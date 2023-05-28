@@ -3,7 +3,9 @@
     <li class="p-5px m-10px flex-wrap" v-for="article in props.articles">
       <time>{{ article.pubDate }}</time>
       <a :href="article.url">{{ article.title }}</a>
-      <i>{{ AUTHORS[article.author].cnName }}</i>
+      <span>{{ AUTHORS[article.author].cnName }}</span>
+      <div class="w-100%"></div>
+      <i>{{ article.description }} </i>
     </li>
   </ul>
 </template>
@@ -27,6 +29,7 @@ ul {
 }
 ul li {
   display: flex;
+  flex-basis: 130px;
 }
 ul li a {
   font-weight: bold;

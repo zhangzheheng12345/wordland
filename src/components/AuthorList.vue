@@ -15,4 +15,8 @@ import { AUTHORS } from '../config'
 ul {
   list-style-type: none;
 }
+div {
+  border: 2px solid #222;
+  border-radius: 5px;
+}
 </style>
