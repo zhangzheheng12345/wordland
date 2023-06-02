@@ -18,7 +18,7 @@ const posts = (await Astro.glob('./*.md')).sort((a, b) =>
     articles={posts.map((post) => {
       return {
         title: post.frontmatter.title,
-        url: post.frontmatter.url,
+        url: post.url,
         pubDate: post.frontmatter.pubDate,
         author: post.frontmatter.author,
         description: post.frontmatter.description
