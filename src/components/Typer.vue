@@ -17,7 +17,6 @@ const props = defineProps<{
 const sentences = ref(new Array(props.sentences.length).fill('|'))
 
 onMounted(async () => {
-  await sleep(700)
   for (let i = 0; i < sentences.value.length; i++) {
     for (let j = 0; j < props.sentences[i].length; j++) {
       if (j == 0) sentences.value[i] = props.sentences[i][0]

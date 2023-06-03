@@ -14,7 +14,6 @@ export const useShowUp = (length: number) => {
       translations: Ref<Array<number>>
     ) =>
       async function () {
-        await sleep(80)
         for (let i = 0; i < length; i++) {
           opacities.value[i] = 1
           translations.value[i] = 0
