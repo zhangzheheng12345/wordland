@@ -1,28 +1,23 @@
 ---
 import BasePage from '../../layouts/BasePage.astro'
 import ArticleList from '../../components/ArticleList.vue'
+import Typer from '../../components/Typer.vue'
 
-const posts = (await Astro.glob('./*.md')).sort((a, b) =>
-  a.frontmatter.pubDate <= b.frontmatter.pubDate ? 1 : -1
-)
+const articles = (await Astro.glob('./*.md'))
+  .sort((a, b) => (a.frontmatter.pubDate <= b.frontmatter.pubDate ? 1 : -1))
+  .map((post) => {
+    return {
+      title: post.frontmatter.title,
+      url: post.url,
+      pubDate: post.frontmatter.pubDate,
+      author: post.frontmatter.author,
+      description: post.frontmatter.description.split(' ')
+    }
+  })
 ---
 
 <BasePage title="文章列表📜" description="我搭建梭罗的小屋 只是面朝大海">
   <h1 class="text-2em m-0.25em ml-0 mr-0">文章列表📜</h1>
-  <br />
-  <p><i>我搭建梭罗的小屋</i></p>
-  <p><i>只是面朝大海</i></p>
-  <br />
-  <ArticleList
-    client:idle
-    articles={posts.map((post) => {
-      return {
-        title: post.frontmatter.title,
-        url: post.url,
-        pubDate: post.frontmatter.pubDate,
-        author: post.frontmatter.author,
-        description: post.frontmatter.description
-      }
-    })}
-  />
+  <Typer sentences={['我搭建梭罗的小屋', '只是面朝大海']} client:idle />
+  <ArticleList client:idle articles={articles} />
 </BasePage>
