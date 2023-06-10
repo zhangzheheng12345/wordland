@@ -21,7 +21,7 @@ const props = defineProps<{
 
 const processedSentences = props.sentences.split(' ')
 
-const sentences = ref(new Array(props.sentences.length).fill('|'))
+const sentences = ref(new Array(processedSentences.length).fill('|'))
 
 onMounted(async () => {
   for (let i = 0; i < sentences.value.length; i++) {
