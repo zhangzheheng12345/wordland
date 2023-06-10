@@ -8,13 +8,15 @@
     {
       "files": ["*.md"],
       "options": {
-        "parser": "markdown-nocjsp"
+        "parser": "markdown-nocjsp",
+        "quickFix": true
       }
     },
     {
       "files": ["*.mdx"],
       "options": {
-        "parser": "mdx-nocjsp"
+        "parser": "mdx-nocjsp",
+        "quickFix": true
       }
     }
   ]
