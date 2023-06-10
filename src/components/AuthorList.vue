@@ -33,7 +33,7 @@ for (let author in AUTHORS) {
 
 const showUp = useShowUp(authors.length)
 
-onMounted(showUp.translate(showUp.opacities, showUp.translations))
+onMounted(() => showUp.translate())
 </script>
 
 <style scoped>

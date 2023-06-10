@@ -18,6 +18,6 @@ const articles = (await Astro.glob('./*.md'))
 
 <BasePage title="文章列表📜" description="我搭建梭罗的小屋 只是面朝大海">
   <h1 class="text-2em m-0.25em ml-0 mr-0">文章列表📜</h1>
-  <Typer sentences={['我搭建梭罗的小屋', '只是面朝大海']} client:idle />
+  <Typer sentences="我搭建梭罗的小屋 只是面朝大海" client:idle />
   <ArticleList client:idle articles={articles} />
 </BasePage>

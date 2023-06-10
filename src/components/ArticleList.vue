@@ -41,7 +41,7 @@ const props = defineProps<{
 
 const showUp = useShowUp(props.articles.length)
 
-onMounted(showUp.translate(showUp.opacities, showUp.translations))
+onMounted(() => showUp.translate())
 </script>
 
 <style scoped>
