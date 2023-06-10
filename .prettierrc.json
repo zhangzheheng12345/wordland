@@ -1,0 +1,21 @@
+{
+  "semi": false,
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "overrides": [
+    {
+      "files": ["*.md"],
+      "options": {
+        "parser": "markdown-nocjsp"
+      }
+    },
+    {
+      "files": ["*.mdx"],
+      "options": {
+        "parser": "mdx-nocjsp"
+      }
+    }
+  ]
+}
