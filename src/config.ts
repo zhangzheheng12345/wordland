@@ -13,3 +13,7 @@ export const AUTHORS = {
     email: 'WAIT TO COME'
   }
 }
+
+// Get the project url & API key for Supabase from the system's env vars
+export const DB_SUPABASE_URL = process.env.WORDLAND_DB_SUPABASE_URL
+export const DB_SUPABASE_API_KEY = process.env.WORDLAND_DB_SUPABASE_API_KEY
