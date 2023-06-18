@@ -1,7 +1,7 @@
 <template>
   <div
     v-for="(author, index) in authors"
-    class="list p-20px mb-20px rounded-5px transition-700"
+    class="list p-20px mb-20px rounded-10px transition-700"
     :style="{
       opacity: showUp.opacities.value[index],
       transform: `translate(0px, ${showUp.translations.value[index]}px)`
@@ -11,7 +11,7 @@
     <div class="ml-10px flex flex-wrap">
       <span
         v-for="badge in author.badges"
-        class="text-white bg-#3273dc line-height-100% m-5px p-5px rounded-5px"
+        class="text-white bg-#3273dc line-height-100% m-5px p-6px rounded-5px"
         >{{ badge }}</span
       >
     </div>
