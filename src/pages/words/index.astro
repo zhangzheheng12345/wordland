@@ -24,4 +24,5 @@ const articles = (await Astro.glob('./*.md'))
   <h1 class="text-2em m-0.25em ml-0 mr-0">文章列表📜</h1>
   <Typer sentences="我搭建梭罗的小屋 只是面朝大海" client:idle />
   <ArticleList client:idle articles={articles} />
+  <div class="max-w-140px h-2px bg-#222 m-auto mt-70px"></div>
 </BasePage>
