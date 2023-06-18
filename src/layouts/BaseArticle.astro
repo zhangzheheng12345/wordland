@@ -4,18 +4,18 @@ import Typer from '../components/Typer.vue'
 
 export interface Props {
   content: {
-    title
-    string
+    title: string
     description: string
+    theme: 'dark' | 'light'
   }
 }
 
 const {
-  content: { title, description }
+  content: { title, description, theme }
 } = Astro.props
 ---
 
-<BasePage title={title} description={description}>
+<BasePage title={title} description={description} theme={theme}>
   <article>
     <h1 class="text-2em m-0.25em ml-0 mr-0">
       {title}

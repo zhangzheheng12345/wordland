@@ -1,0 +1,14 @@
+@keyframes throttle {
+  from {
+    pointer-events: none;
+  }
+  to {
+    pointer-events: all;
+  }
+}
+.throttle {
+  animation: throttle 0.3s step-end forwards;
+}
+.throttle:active {
+  animation: none;
+}

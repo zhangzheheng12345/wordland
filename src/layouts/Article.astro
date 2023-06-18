@@ -18,11 +18,17 @@ const {
 } = Astro.props
 ---
 
-<BasePage title={title} description={description}>
+<BasePage title={title} description={description} theme="light">
   <article>
     {
       heroImage && (
-        <img width={720} height={360} src={heroImage} alt="" class="cover" />
+        <img
+          width={720}
+          height={360}
+          src={heroImage}
+          alt=""
+          class="m-1% box-border w-98% h-auto rounded-10px"
+        />
       )
     }
     <h1 class="text-2em m-0.25em ml-0 mr-0">

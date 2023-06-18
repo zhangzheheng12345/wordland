@@ -7,12 +7,3 @@ const { href, class: className, ...props } = Astro.props
 <a href={href} class:list={[className]} {...props}>
   <slot />
 </a>
-<style>
-  a {
-    display: inline-block;
-    font-size: 21px;
-    margin: 5px;
-    color: #222;
-    font-weight: bold;
-  }
-</style>

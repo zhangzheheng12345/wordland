@@ -1,0 +1,37 @@
+body {
+  margin: auto;
+  padding: 20px;
+  max-width: 65ch;
+}
+main {
+  min-height: 90vh;
+}
+textarea {
+  width: 100%;
+}
+table {
+  width: 100%;
+}
+blockquote {
+  border-width: 0px;
+  border-left-width: 2px;
+  padding: 1px 0px 1px 10px;
+  margin: 0px;
+}
+blockquote p {
+  margin: 5px;
+}
+nav {
+  border-radius: 7px;
+}
+nav a {
+  display: inline-block;
+  margin: 5px;
+}
+footer {
+  margin: 15px;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  padding: 25px;
+  border-radius: 10px;
+}
