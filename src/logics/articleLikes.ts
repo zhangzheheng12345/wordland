@@ -7,17 +7,16 @@ export async function newLikesCount(name: string) {
     .insert({ article_name: name, likes_count: 0 })
 }
 
-export async function getArticleLikes(name: string) {
+export async function getArticleLikes(name: string): Promise<number | null> {
   const { data, error } = await supabase
     .from('article_likes')
     .select()
     .eq('article_name', name)
-  if (data.length == 0) {
+  if (error) return null
+  else if (data.length == 0) {
     newLikesCount(name)
     return 0
-  } else {
-    return data[0].likes_count
-  }
+  } else return data[0].likes_count
 }
 
 export async function toggleLike(

@@ -1,3 +1,7 @@
+export function getStorageKeyToLike(name: string) {
+  return `wordland-${name}-to-like`
+}
+
 export function getStorageKeyForArticleLikes(name: string) {
-  return `${name}-likes-count`
+  return `wordland-${name}-likes-count`
 }
