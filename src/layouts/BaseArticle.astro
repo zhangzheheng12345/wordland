@@ -16,9 +16,11 @@ const {
 ---
 
 <BasePage title={title} description={description}>
-  <h1 class="text-2em m-0.25em ml-0 mr-0">
-    {title}
-  </h1>
-  <Typer sentences={description} client:idle />
-  <slot />
+  <article>
+    <h1 class="text-2em m-0.25em ml-0 mr-0">
+      {title}
+    </h1>
+    <Typer sentences={description} client:idle />
+    <slot />
+  </article>
 </BasePage>

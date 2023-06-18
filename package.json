@@ -19,14 +19,13 @@
     "@supabase/supabase-js": "^2.25.0",
     "@vueuse/core": "^10.2.0",
     "astro": "^2.5.5",
-    "unocss": "^0.51.13",
     "vue": "^3.3.4"
   },
   "devDependencies": {
     "@iconify/json": "^2.2.79",
-    "@unocss/preset-icons": "^0.53.1",
     "prettier": "^2.8.8",
     "prettier-plugin-astro": "^0.9.1",
-    "prettier-plugin-md-nocjsp": "^1.5.1"
+    "prettier-plugin-md-nocjsp": "^1.5.1",
+    "unocss": "^0.53.1"
   }
 }

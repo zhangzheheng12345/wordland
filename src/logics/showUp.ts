@@ -1,5 +1,4 @@
 import { ref } from 'vue'
-import type { Ref } from 'vue'
 
 export function sleep(delay: number) {
   return new Promise((resolve) => setTimeout(resolve, delay))

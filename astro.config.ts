@@ -1,20 +1,24 @@
 import { defineConfig } from 'astro/config'
 import mdx from '@astrojs/mdx'
 import UnoCSS from 'unocss/astro'
-import presetIcons from '@unocss/preset-icons'
+import { presetUno, presetIcons } from 'unocss'
 import sitemap from '@astrojs/sitemap'
 import netlify from '@astrojs/netlify/functions'
-
 import vue from '@astrojs/vue'
 
-// https://astro.build/config
 export default defineConfig({
   site: 'https://wordland.netlify.app',
   integrations: [
     mdx(),
     sitemap(),
     UnoCSS({
-      presets: [presetIcons()]
+      presets: [
+        presetUno(),
+        presetIcons({
+          scale: 1.5,
+          cdn: 'https://esm.sh'
+        })
+      ]
     }),
     vue()
   ],

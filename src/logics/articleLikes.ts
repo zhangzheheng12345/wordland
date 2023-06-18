@@ -1,5 +1,5 @@
 import { supabase } from './supabaseClient'
-import type Ref from 'vue'
+import type { Ref } from 'vue'
 
 export async function newLikesCount(name: string) {
   const { data, error } = await supabase
@@ -7,15 +7,17 @@ export async function newLikesCount(name: string) {
     .insert({ article_name: name, likes_count: 0 })
 }
 
-export async function getArticleLikes(name: string): number {
+export async function getArticleLikes(name: string) {
   const { data, error } = await supabase
     .from('article_likes')
     .select()
     .eq('article_name', name)
-  if (error !== undefined) {
+  if (data.length == 0) {
     newLikesCount(name)
     return 0
-  } else return data[0].likes_count
+  } else {
+    return data[0].likes_count
+  }
 }
 
 export async function toggleLike(

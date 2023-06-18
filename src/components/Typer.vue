@@ -1,9 +1,4 @@
 <template>
-  <noscript>
-    <p v-for="sentence in processedSentences">
-      {{ sentence }}
-    </p>
-  </noscript>
   <br />
   <p v-for="sentence in sentences">
     <i>{{ sentence }}</i>

@@ -14,6 +14,7 @@ export const AUTHORS = {
   }
 }
 
-// Get the project url & API key for Supabase from the system's env vars
-export const DB_SUPABASE_URL = process.env.WORDLAND_DB_SUPABASE_URL
-export const DB_SUPABASE_API_KEY = process.env.WORDLAND_DB_SUPABASE_API_KEY
+// Wordland's Supabase DB url & anon key
+export const DB_SUPABASE_URL = 'https://fpfglrtskyddxauvqzss.supabase.co'
+export const DB_SUPABASE_API_KEY =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZwZmdscnRza3lkZHhhdXZxenNzIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODY5MTQ1NDYsImV4cCI6MjAwMjQ5MDU0Nn0.JE4ljaOa6n1QeTIaARFwKd92LyqDwFBHdkSV1I5MW9c'
