@@ -6,9 +6,9 @@
     <span class="i-tabler-chevrons-down text-1.1em transition-150"></span>
     <span class="text-1.1em">最近</span>
   </h2>
-  <div v-else class="flex items-center">
-    <span class="i-tabler-search mr-3px"></span>
-    <input v-model="searchWords" />
+  <div v-else class="flex items-center flex-nowrap">
+    <input v-model="searchWords" class="w-100%" />
+    <span class="i-tabler-search text-1.2em m-6px"></span>
   </div>
   <ul class="list-none p-unset" :class="mode === 'Full' ? 'min-h-80vh' : ''">
     <li
