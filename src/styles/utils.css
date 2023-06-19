@@ -12,3 +12,8 @@
 .throttle:active {
   animation: none;
 }
+
+.pushable {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}

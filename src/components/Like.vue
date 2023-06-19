@@ -1,6 +1,6 @@
 <template>
   <div
-    class="max-w-130px m-auto mt-20px p-1px rounded-10px flex items-center justify-center cursor-pointer animate-iteration-1 animate-jello active:animate-none throttle"
+    class="pushable max-w-130px m-auto mt-20px p-1px rounded-10px flex items-center justify-center cursor-pointer throttle"
     @click="toggle"
     :style="`animation-duration:${duration}s;`"
   >
@@ -49,8 +49,8 @@ div {
   background-image: linear-gradient(
     145deg,
     var(--light-sea-blue) 0%,
-    var(--sea-blue) 85%,
-    var(--dark-sea-blue) 96%,
+    var(--sea-blue) 65%,
+    var(--dark-sea-blue) 90%,
     var(--dark-sea-blue) 100%
   );
 }
