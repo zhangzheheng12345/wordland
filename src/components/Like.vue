@@ -1,8 +1,7 @@
 <template>
   <div
-    class="pushable max-w-130px m-auto mt-20px p-1px rounded-10px flex items-center justify-center cursor-pointer throttle"
+    class="pushable max-w-130px m-auto mt-20px p-1px rounded-10px flex items-center justify-center cursor-pointer throttle transition-250"
     @click="toggle"
-    :style="`animation-duration:${duration}s;`"
   >
     <span
       class="m-5px"
@@ -14,7 +13,7 @@
 
 <script setup lang="ts">
 import { useLocalStorage } from '@vueuse/core'
-import { onMounted, ref } from 'vue'
+import { onMounted } from 'vue'
 import {
   getStorageKeyForArticleLikes,
   getStorageKeyToLike
@@ -28,14 +27,9 @@ const props = defineProps<{
 const toLike = useLocalStorage(getStorageKeyForArticleLikes(props.name), false)
 const likesCount = useLocalStorage(getStorageKeyToLike(props.name), 0)
 
-const duration = ref(0)
-
 onMounted(async () => {
   const res = await getArticleLikes(props.name)
   if (res) likesCount.value = res as number
-  setTimeout(() => {
-    duration.value = 1
-  }, 1000)
 })
 
 function toggle() {
@@ -53,6 +47,9 @@ div {
     var(--dark-sea-blue) 90%,
     var(--dark-sea-blue) 100%
   );
+}
+div:hover {
+  transform: scale(1.04, 1.02);
 }
 div * {
   color: white;

@@ -1,0 +1,25 @@
+---
+import ArticleList from './ArticleList.vue'
+
+export interface Props {
+  mode: 'Full' | 'Simple'
+}
+
+const { mode } = Astro.props
+
+const articles = (await Astro.glob('../pages/words/*.md'))
+  .sort((a, b) => (a.frontmatter.pubDate <= b.frontmatter.pubDate ? 1 : -1))
+  .map((post) => {
+    return {
+      title: post.frontmatter.title,
+      url: post.url,
+      pubDate: post.frontmatter.pubDate,
+      author: post.frontmatter.author,
+      description: post.frontmatter.description.split(' ')
+    }
+  })
+---
+
+<div>
+  <ArticleList client:idle articles={articles} mode={mode} />
+</div>

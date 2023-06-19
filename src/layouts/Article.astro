@@ -35,7 +35,10 @@ const {
       {title}
     </h1>
     <time>{pubDate}</time>
-    <p>{`✏️ ${author && AUTHORS[author].cnName}`}</p>
+    <p class="flex items-center mt-8px">
+      <span class="text-1.1em">{author && AUTHORS[author].cnName}</span>
+      <span class="ml-3px i-tabler-ballpen"></span>
+    </p>
     <br />
     <slot />
   </article>
