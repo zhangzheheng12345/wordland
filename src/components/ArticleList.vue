@@ -7,7 +7,7 @@
     <span class="text-1.1em">最近</span>
   </h2>
   <div v-else class="flex items-center flex-nowrap">
-    <input v-model="searchWords" class="w-100%" />
+    <input v-model="searchWords" class="w-100% pushable" />
     <span class="i-tabler-search text-1.2em m-6px"></span>
   </div>
   <ul class="list-none p-unset" :class="mode === 'Full' ? 'min-h-80vh' : ''">
