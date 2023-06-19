@@ -1,5 +1,6 @@
 ---
 import ArticleList from './ArticleList.vue'
+import type { Article } from '../logics/searchArticle'
 
 export interface Props {
   mode: 'Full' | 'Simple'
@@ -7,7 +8,7 @@ export interface Props {
 
 const { mode } = Astro.props
 
-const articles = (await Astro.glob('../pages/words/*.md'))
+const articles: Array<Article> = (await Astro.glob('../pages/words/*.md'))
   .sort((a, b) => (a.frontmatter.pubDate <= b.frontmatter.pubDate ? 1 : -1))
   .map((post) => {
     return {

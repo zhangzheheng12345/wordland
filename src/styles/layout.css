@@ -9,6 +9,12 @@ main {
 textarea {
   width: 100%;
 }
+input {
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+  padding-left: 8px;
+}
 table {
   width: 100%;
 }

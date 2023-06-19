@@ -19,6 +19,7 @@
     "@supabase/supabase-js": "^2.25.0",
     "@vueuse/core": "^10.2.0",
     "astro": "^2.5.5",
+    "fuse.js": "^6.6.2",
     "vue": "^3.3.4"
   },
   "devDependencies": {

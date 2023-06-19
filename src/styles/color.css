@@ -25,6 +25,14 @@ b {
 a {
   color: var(--sea-blue);
 }
+input {
+  border: 2px solid var(--very-dark-gray);
+  transition: all 0.08s ease-in-out;
+}
+input:focus {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+  outline: 0px;
+}
 img {
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 }

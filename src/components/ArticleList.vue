@@ -6,7 +6,11 @@
     <span class="i-tabler-chevrons-down text-1.1em transition-150"></span>
     <span class="text-1.1em">最近</span>
   </h2>
-  <ul class="list-none p-unset">
+  <div v-else class="flex items-center">
+    <span class="i-tabler-search mr-3px"></span>
+    <input v-model="searchWords" />
+  </div>
+  <ul class="list-none p-unset" :class="mode === 'Full' ? 'min-h-80vh' : ''">
     <li
       class="p-10px pl-20px mb-20px items-center flex flex-wrap transition-700"
       v-for="(article, index) in articlesToShow"
@@ -55,26 +59,31 @@
 
 <script setup lang="ts">
 import { AUTHORS } from '../config'
-import { onMounted } from 'vue'
+import { onMounted, ref, watchEffect } from 'vue'
 import { useShowUp } from '../logics/showUp'
+import type { Article } from '../logics/searchArticle'
+import { search } from '../logics/searchArticle'
 
 const props = defineProps<{
-  articles: Array<{
-    title: string
-    url: string
-    pubDate: string
-    author: string
-    description: Array<string>
-  }>
+  articles: Array<Article>
   mode: 'Full' | 'Simple'
 }>()
 
-const articlesToShow =
+const articlesToShow = ref(
   props.mode === 'Full' ? props.articles : props.articles.slice(0, 5)
+)
 
-const showUp = useShowUp(articlesToShow.length + 1)
+// Show up animation
+const showUp = useShowUp(articlesToShow.value.length + 1)
 
 onMounted(() => showUp.translate())
+
+// Search article
+const searchWords = ref('')
+watchEffect(() => {
+  if (props.mode === 'Full')
+    articlesToShow.value = search(searchWords.value, props.articles)
+})
 </script>
 
 <style scoped>
