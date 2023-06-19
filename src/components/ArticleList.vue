@@ -1,7 +1,7 @@
 <template>
   <h2
     v-if="mode === 'Simple'"
-    class="title-recent flex items-center mt-0 mb-33px w-auto cursor-default"
+    class="title-recent flex items-center mt-8px mb-20px w-auto cursor-default"
   >
     <span class="i-tabler-chevrons-down text-1.1em transition-150"></span>
     <span class="text-1.1em">最近</span>
