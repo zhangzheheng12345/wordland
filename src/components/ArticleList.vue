@@ -22,7 +22,7 @@
     >
       <a
         :href="article.url"
-        class="article-link text-1.35em font-bold m-5px ml-2px mr-0 hover:decoration-none flex items-center"
+        class="pushable article-link text-1.35em font-bold m-5px ml-2px mr-0 hover:decoration-none flex items-center"
       >
         <span>{{ article.title }}</span>
         <span class="i-tabler-chevrons-right transition-180"></span>
