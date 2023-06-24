@@ -1,6 +1,6 @@
 # 文字岛 / Wordland
 
-网站：[https://wordland.netlify.app](https://wordland.netlify.app)
+网站：[https://wordland.site](https://wordland.site)
 
 随心而写，随心而阅。
 

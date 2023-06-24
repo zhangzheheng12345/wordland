@@ -6,8 +6,10 @@ import sitemap from '@astrojs/sitemap'
 import netlify from '@astrojs/netlify/functions'
 import vue from '@astrojs/vue'
 
+const siteDomain = 'wordland.site'
+
 export default defineConfig({
-  site: 'https://wordland.netlify.app',
+  site: 'https://' + siteDomain,
   integrations: [
     mdx(),
     sitemap(),
