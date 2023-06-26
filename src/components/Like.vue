@@ -13,24 +13,19 @@
 
 <script setup lang="ts">
 import { useLocalStorage } from '@vueuse/core'
-import { onMounted } from 'vue'
-import {
-  getStorageKeyForArticleLikes,
-  getStorageKeyToLike
-} from '../logics/utils'
+import { ref } from 'vue'
+import { getStorageKeyToLike } from '../logics/utils'
 import { getArticleLikes, toggleLike } from '../logics/articleLikes'
 
 const props = defineProps<{
   name: string
 }>()
 
-const toLike = useLocalStorage(getStorageKeyForArticleLikes(props.name), false)
-const likesCount = useLocalStorage(getStorageKeyToLike(props.name), 0)
+const toLike = useLocalStorage(getStorageKeyToLike(props.name), false)
+const likesCount = ref(0)
 
-onMounted(async () => {
-  const res = await getArticleLikes(props.name)
-  if (res) likesCount.value = res as number
-})
+const res = await getArticleLikes(props.name)
+if (res) likesCount.value = res as number
 
 function toggle() {
   toggleLike(props.name, toLike, likesCount)

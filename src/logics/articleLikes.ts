@@ -2,7 +2,7 @@ import { supabase } from './supabaseClient'
 import type { Ref } from 'vue'
 
 export async function newLikesCount(name: string) {
-  const { data, error } = await supabase
+  const { error } = await supabase
     .from('article_likes')
     .insert({ article_name: name, likes_count: 0 })
 }
