@@ -1,6 +1,6 @@
 <template>
   <div
-    class="pushable max-w-130px m-auto mt-20px p-1px rounded-10px flex items-center justify-center cursor-pointer throttle transition-250"
+    class="pushable max-w-130px m-auto mt-20px p-1px rounded-10px flex items-center justify-center cursor-pointer throttle transition-70"
     @click="toggle"
   >
     <span
@@ -43,7 +43,7 @@ div {
     var(--dark-sea-blue) 100%
   );
 }
-div:hover {
+div:active {
   transform: scale(1.04, 1.02);
 }
 div * {
