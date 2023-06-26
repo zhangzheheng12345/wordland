@@ -3,17 +3,19 @@
     class="pushable max-w-130px m-auto mt-20px p-1px rounded-10px flex items-center justify-center cursor-pointer throttle transition-70"
     @click="toggle"
   >
+    <span v-if="!loaded" class="i-tabler-loader-2 m-5px animate-spin"></span>
     <span
+      v-show="loaded"
       class="m-5px"
       :class="toLike ? 'i-tabler-thumb-up-filled' : 'i-tabler-thumb-up'"
     ></span>
-    <span>{{ likesCount }}</span>
+    <span v-show="loaded">{{ likesCount }}</span>
   </div>
 </template>
 
 <script setup lang="ts">
 import { useLocalStorage } from '@vueuse/core'
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { getStorageKeyToLike } from '../logics/utils'
 import { getArticleLikes, toggleLike } from '../logics/articleLikes'
 
@@ -23,9 +25,19 @@ const props = defineProps<{
 
 const toLike = useLocalStorage(getStorageKeyToLike(props.name), false)
 const likesCount = ref(0)
+const loaded = ref(false)
 
 const res = await getArticleLikes(props.name)
 if (res) likesCount.value = res as number
+
+onMounted(() => {
+  // Refresh toLike
+  toLike.value = !toLike.value
+  setTimeout(() => {
+    toLike.value = !toLike.value
+  }, 0)
+  loaded.value = true
+})
 
 function toggle() {
   toggleLike(props.name, toLike, likesCount)
