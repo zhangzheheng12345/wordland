@@ -53,3 +53,6 @@ blockquote {
   border: solid var(--gray);
   color: var(--very-dark-gray);
 }
+footer {
+  opacity: 0.9;
+}

@@ -23,9 +23,9 @@ onMounted(async () => {
     for (let j = 0; j < processedSentences[i].length; j++) {
       if (j == 0) sentences.value[i] = processedSentences[i][0]
       else sentences.value[i] += processedSentences[i][j]
-      await sleep(70)
+      await sleep(90)
     }
-    await sleep(120)
+    await sleep(140)
   }
 })
 </script>
