@@ -1,6 +1,6 @@
 <template>
   <div
-    class="pushable max-w-130px m-auto mt-20px p-1px rounded-10px flex items-center justify-center cursor-pointer throttle transition-70"
+    class="pushable max-w-8em m-auto mt-20px p-2px rounded-10px flex items-center justify-center cursor-pointer throttle transition-200 shadow-md"
     @click="toggle"
   >
     <span
@@ -49,7 +49,6 @@ function toggle() {
 
 <style scoped>
 div {
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
   background-image: linear-gradient(
     145deg,
     var(--light-sea-blue) 0%,

@@ -1,7 +1,6 @@
 ---
 import BasePage from './BasePage.astro'
 import Like from '../components/Like.vue'
-import { AUTHORS } from '../config'
 
 export interface Props {
   content: {
@@ -27,7 +26,7 @@ const {
           height={360}
           src={heroImage}
           alt=""
-          class="mt-10px mb-12px box-border w-100% h-auto rounded-10px"
+          class="mt-10px mb-12px box-border w-100% h-auto rounded-10px shadow-lg"
         />
       )
     }
@@ -36,7 +35,7 @@ const {
     </h1>
     <time>{pubDate}</time>
     <p class="flex items-center mt-8px">
-      <span class="text-1.1em">{author && AUTHORS[author].cnName}</span>
+      <span class="text-1.1em">{author}</span>
       <span class="ml-3px i-tabler-ballpen"></span>
     </p>
     <br />

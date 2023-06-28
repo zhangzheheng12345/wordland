@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/BaseArticle.astro
-title: 作者列表✏️
+title: 作者列表
 description: 写下定义 定义新的我
 ---
 
@@ -8,8 +8,8 @@ import AuthorList from '../components/AuthorList.vue'
 
 欢迎加入文字岛🏝️
 
-**[投稿✉️](/write)**
+import ToWrite from '../components/ToWrite.vue'
 
-<br />
+<ToWrite />
 
 <AuthorList client:idle />

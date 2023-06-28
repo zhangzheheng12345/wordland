@@ -1,6 +1,6 @@
 <template>
   <div
-    v-for="(author, index) in authors"
+    v-for="(author, index) in AUTHORS"
     class="list p-20px mb-20px rounded-10px transition-700"
     :style="{
       opacity: showUp.opacities.value[index],
@@ -11,7 +11,7 @@
     <div class="ml-10px flex flex-wrap">
       <span
         v-for="badge in author.badges"
-        class="text-white bg-#3273dc line-height-100% m-5px p-6px rounded-5px"
+        class="badge text-white line-height-100% m-5px p-6px rounded-5px shadow-sm"
         >{{ badge }}</span
       >
     </div>
@@ -26,12 +26,7 @@ import { onMounted } from 'vue'
 import { AUTHORS } from '../config'
 import { useShowUp } from '../logics/showUp'
 
-const authors = []
-for (let author in AUTHORS) {
-  authors.push(AUTHORS[author])
-}
-
-const showUp = useShowUp(authors.length)
+const showUp = useShowUp(AUTHORS.length)
 
 onMounted(() => showUp.translate())
 </script>

@@ -7,7 +7,7 @@
     <span class="text-1.1em">最近</span>
   </h2>
   <div v-else class="flex items-center flex-nowrap">
-    <input v-model="searchWords" class="w-100% pushable" />
+    <input v-model="searchWords" class="w-100% pushable focus:shadow-lg" />
     <span class="i-tabler-search text-1.2em m-6px"></span>
   </div>
   <ul class="list-none p-unset" :class="mode === 'Full' ? 'min-h-80vh' : ''">
@@ -30,7 +30,7 @@
       <div class="w-100%"></div>
       <time class="ml-20px m-5px not-italic">{{ article.pubDate }}</time>
       <span class="ml-8px">
-        {{ AUTHORS[article.author].cnName }}
+        {{ article.author }}
       </span>
       <span class="i-tabler-ballpen ml-3px hover:"></span>
       <div class="w-100%"></div>
@@ -58,7 +58,6 @@
 </template>
 
 <script setup lang="ts">
-import { AUTHORS } from '../config'
 import { onMounted, ref, watchEffect } from 'vue'
 import { useShowUp } from '../logics/showUp'
 import type { Article } from '../logics/searchArticle'

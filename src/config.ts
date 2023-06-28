@@ -1,23 +1,23 @@
 export const SITE_TITLE = '文字岛 | Wordland 🏝️'
 export const SITE_DESCRIPTION = '在繁华的世界里 找寻文字的痕迹'
 
-export const AUTHORS = {
-  'Youzuo Zhang': {
+export const AUTHORS = [
+  {
     cnName: '张又左',
     badges: ['编辑', '撰写人'],
     email: 'zhangzheheng12345@163.com'
   },
-  'Yanru Chen': {
+  {
     cnName: '陈晏如',
     badges: ['撰写人'],
     email: 'WAIT TO COME'
   },
-  'Zuo Lan': {
+  {
     cnName: '左蓝',
     badges: ['撰写人'],
     email: 'quensonanna.su@icloud.com'
   }
-}
+]
 
 // Wordland's Supabase DB url & anon key
 export const DB_SUPABASE_URL = 'https://fpfglrtskyddxauvqzss.supabase.co'
