@@ -14,6 +14,18 @@ export default defineConfig({
     mdx(),
     sitemap(),
     UnoCSS({
+      theme: {
+        colors: {
+          // Make color vars from color.css available in UnoCSS
+          basicGray: 'var(--gray)',
+          darkGray: 'var(--dark-gray)',
+          veryDarkGray: 'var(--very-dark-gray)',
+          lightSeaBlue: 'var(--light-sea-blue)',
+          seaBlue: 'var(--sea-blue)',
+          darkSeaBlue: 'var(--dark-sea-blue)',
+          sandYellow: 'var(--sand-yellow)'
+        }
+      },
       presets: [
         presetUno(),
         presetIcons({
