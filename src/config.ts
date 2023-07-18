@@ -10,7 +10,7 @@ export const AUTHORS = [
   {
     cnName: '陈晏如',
     badges: ['撰写人'],
-    email: 'WAIT TO COME'
+    email: '2512006026@qq.com'
   },
   {
     cnName: '左蓝',
