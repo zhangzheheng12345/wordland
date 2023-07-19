@@ -16,7 +16,7 @@ const articles: Array<Article> = (await Astro.glob('../pages/words/*.md'))
       url: post.url,
       pubDate: post.frontmatter.pubDate,
       author: post.frontmatter.author,
-      description: post.frontmatter.description.split(' ')
+      description: post.frontmatter.description.split(' | ')
     }
   })
 ---
