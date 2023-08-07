@@ -21,6 +21,7 @@ import { useLocalStorage } from '@vueuse/core'
 import { onMounted, ref } from 'vue'
 import { getStorageKeyToLike } from '../logics/utils'
 import { getArticleLikes, toggleLike } from '../logics/articleLikes'
+import { sleep } from '../logics/showUp'
 
 const props = defineProps<{
   name: string
@@ -31,15 +32,16 @@ const likesCount = ref(0)
 const loaded = ref(false)
 
 const res = await getArticleLikes(props.name)
-if (res) likesCount.value = res as number
+const res_ = res ? res as number : 0
 
-onMounted(() => {
+onMounted(async () => {
   // Refresh toLike
   toLike.value = !toLike.value
   setTimeout(() => {
     toLike.value = !toLike.value
   }, 0)
   loaded.value = true
+  for(; likesCount.value < res_; likesCount.value++) await sleep(80)
 })
 
 function toggle() {
@@ -49,6 +51,7 @@ function toggle() {
 
 <style scoped>
 div {
+  font-family: var(--mono-more);
   background-image: linear-gradient(
     145deg,
     var(--light-sea-blue) 0%,

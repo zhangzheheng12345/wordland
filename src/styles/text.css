@@ -1,13 +1,26 @@
+:root {
+  --mono-basic: 'PingFang SC', 'Hiragino Sans GB', 
+    'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  --mono-more: Verdana, var(--mono-basic);
+
+}
 time {
   font-style: italic;
 }
 body {
-  font-family: 'PingFang SC', 'Hiragino Sans GB', 
-    'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  font-family: var(--mono-basic);
   text-align: left;
   word-wrap: break-word;
   overflow-wrap: break-word;
   line-height: 1.5;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--mono-more);
 }
 a {
   text-decoration: none;
