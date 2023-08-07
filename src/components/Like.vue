@@ -41,7 +41,7 @@ onMounted(async () => {
     toLike.value = !toLike.value
   }, 0)
   loaded.value = true
-  for(; likesCount.value < res_; likesCount.value++) await sleep(80)
+  for(; likesCount.value < res_; likesCount.value++) await sleep(120)
 })
 
 function toggle() {
