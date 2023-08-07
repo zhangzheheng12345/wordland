@@ -44,11 +44,11 @@ onMounted(async () => {
   loaded.value = true
   await sleep(10)
   loaded1.value = true
-  await sleep(110)
+  await sleep(250)
   loaded2.value = true
-  await sleep(110)
+  await sleep(500)
   for(; likesCount.value < res_; likesCount.value++)
-    await sleep(likesCount.value < 5 ? (likesCount.value - 5) * (likesCount.value - 5) + 100 : 100)
+    await sleep(likesCount.value < 5 ? 1.1 * (likesCount.value - 5) * (likesCount.value - 5) + 100 : 100)
 })
 
 function toggle() {
