@@ -40,6 +40,11 @@ onMounted(async () => {
   setTimeout(() => {
     toLike.value = !toLike.value
   }, 0)
+  // Temporary forbid likes counting displaying animation
+  loaded.value = true, loaded1.value = true, loaded2.value = true
+  likesCount.value = res_
+  /*
+  // TODO: Need to be better-looking and smoothy
   // Animate to display the likes counting number
   loaded.value = true
   await sleep(10)
@@ -49,6 +54,7 @@ onMounted(async () => {
   await sleep(500)
   for(; likesCount.value < res_; likesCount.value++)
     await sleep(likesCount.value < 5 ? 1.1 * (likesCount.value - 5) * (likesCount.value - 5) + 100 : 100)
+  */
 })
 
 function toggle() {
