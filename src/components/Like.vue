@@ -41,7 +41,10 @@ onMounted(async () => {
     toLike.value = !toLike.value
   }, 0)
   loaded.value = true
-  for(; likesCount.value < res_; likesCount.value++) await sleep(120)
+  // Animate to display the likes counting number
+  await sleep(200)
+  for(; likesCount.value < res_; likesCount.value++)
+    await sleep(likesCount.value < 5 ? (likesCount.value - 5) * (likesCount.value - 5) + 100 : 100
 })
 
 function toggle() {
