@@ -8,11 +8,11 @@
       class="i-mingcute-loading-fill m-5px animate-spin"
     ></span>
     <span
-      v-show="loaded"
+      v-show="loaded1"
       class="m-5px"
       :class="toLike ? 'i-tabler-thumb-up-filled' : 'i-tabler-thumb-up'"
     ></span>
-    <span v-show="loaded">{{ likesCount }}</span>
+    <span v-show="loaded2">{{ likesCount }}</span>
   </div>
 </template>
 
@@ -29,7 +29,7 @@ const props = defineProps<{
 
 const toLike = useLocalStorage(getStorageKeyToLike(props.name), false)
 const likesCount = ref(0)
-const loaded = ref(false)
+const loaded = ref(false), loaded1 = ref(false), loaded2 = ref(false)
 
 const res = await getArticleLikes(props.name)
 const res_ = res ? res as number : 0
@@ -42,7 +42,11 @@ onMounted(async () => {
   }, 0)
   loaded.value = true
   // Animate to display the likes counting number
-  await sleep(200)
+  await sleep(10)
+  loaded1.value = true
+  await sleep(110)
+  loaded2.value = true
+  await sleep(110)
   for(; likesCount.value < res_; likesCount.value++)
     await sleep(likesCount.value < 5 ? (likesCount.value - 5) * (likesCount.value - 5) + 100 : 100
 })
