@@ -16,6 +16,11 @@ export const AUTHORS = [
     cnName: '左蓝',
     badges: ['撰写人'],
     email: 'quensonanna.su@icloud.com'
+  },
+  {
+    cnName: '莫名',
+    badges: ['撰写人'],
+    email: 'morningming@foxmail.com'
   }
 ]
 
