@@ -10,9 +10,9 @@
     <input v-model="searchWords" class="w-100% pushable focus:shadow-lg" />
     <span class="i-tabler-search text-1.2em m-6px"></span>
   </div>
-  <div class="slide-in-content">
+  <div class="slide-enter-content">
     <div
-      class="p-10px pl-20px mb-20px items-center flex flex-wrap transition-700"
+      class="list p-10px pl-20px mb-20px items-center flex flex-wrap"
       v-for="(article, index) in articlesToShow"
       :class="mode === 'Full' ? 'rounded-10px' : 'rounded-7px'"
     >
@@ -70,7 +70,7 @@ watchEffect(() => {
 </script>
 
 <style scoped>
-ul li {
+div.list {
   border: 2px solid var(--very-dark-gray);
 }
 .title-recent {
