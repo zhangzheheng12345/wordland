@@ -10,15 +10,11 @@
     <input v-model="searchWords" class="w-100% pushable focus:shadow-lg" />
     <span class="i-tabler-search text-1.2em m-6px"></span>
   </div>
-  <ul class="list-none p-unset" :class="mode === 'Full' ? 'min-h-80vh' : ''">
-    <li
+  <div class="slide-in-content">
+    <div
       class="p-10px pl-20px mb-20px items-center flex flex-wrap transition-700"
       v-for="(article, index) in articlesToShow"
       :class="mode === 'Full' ? 'rounded-10px' : 'rounded-7px'"
-      :style="{
-        opacity: showUp.opacities.value[index],
-        transform: `translate(0px, ${showUp.translations.value[index]}px)`
-      }"
     >
       <a
         :href="article.url"
@@ -39,27 +35,20 @@
           <i>{{ sentence }}</i>
         </p>
       </div>
-    </li>
-  </ul>
-  <a
-    v-if="mode === 'Simple'"
-    href="/words"
-    class="pushable all-articles-link transition-450 flex m-auto mt-33px mb-73px items-center justify-center max-w-110px rounded-10px p-5px text-#222"
-    :style="{
-      opacity: showUp.opacities.value[showUp.opacities.value.length - 1],
-      transform: `translate(0px, ${
-        showUp.translations.value[showUp.translations.value.length - 1]
-      }px)`
-    }"
-  >
-    <span>全部文章</span>
-    <span class="ml-1px i-tabler-chevrons-right transition-160"></span>
-  </a>
+    </div>
+    <a
+      v-if="mode === 'Simple'"
+      href="/words"
+      class="pushable all-articles-link transition-450 flex m-auto mt-33px mb-73px items-center justify-center max-w-110px rounded-10px p-5px text-#222"
+    >
+      <span>全部文章</span>
+      <span class="ml-1px i-tabler-chevrons-right transition-160"></span>
+    </a>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, watchEffect } from 'vue'
-import { useShowUp } from '../logics/showUp'
+import { ref, watchEffect } from 'vue'
 import type { Article } from '../logics/searchArticle'
 import { search } from '../logics/searchArticle'
 
@@ -71,11 +60,6 @@ const props = defineProps<{
 const articlesToShow = ref(
   props.mode === 'Full' ? props.articles : props.articles.slice(0, 5)
 )
-
-// Show up animation
-const showUp = useShowUp(articlesToShow.value.length + 1)
-
-onMounted(() => showUp.translate())
 
 // Search article
 const searchWords = ref('')
