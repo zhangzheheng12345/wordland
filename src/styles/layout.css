@@ -10,7 +10,7 @@ textarea {
   width: 100%;
 }
 input {
-  border-radius: 5px;
+  border-radius: 7px;
   margin: 5px;
   margin-left: 0px;
   padding: 5px;
@@ -29,7 +29,7 @@ blockquote p {
   margin: 5px;
 }
 nav {
-  border-radius: 7px;
+  border-radius: 8px;
 }
 nav a {
   display: inline-block;

@@ -6,15 +6,18 @@
     <span class="i-tabler-chevrons-down text-1.1em transition-150"></span>
     <span class="text-1.1em">最近</span>
   </h2>
-  <div v-else class="flex items-center flex-nowrap">
-    <input v-model="searchWords" class="w-100% pushable focus:shadow-lg" />
+  <div v-else class="flex items-center flex-nowrap mb-5px">
+    <input
+      v-model="searchWords"
+      class="w-full pushable focus:shadow-lg hover:shadow-lg"
+    />
     <span class="i-tabler-search text-1.2em m-6px"></span>
   </div>
   <div class="slide-enter-content">
     <div
-      class="list p-10px pl-20px mb-20px items-center flex flex-wrap"
-      v-for="(article, index) in articlesToShow"
-      :class="mode === 'Full' ? 'rounded-10px' : 'rounded-7px'"
+      class="list p-10px pl-20px mb-20px items-center flex flex-wrap hover:shadow-lg"
+      v-for="article in articlesToShow"
+      :class="mode === 'Full' ? 'rounded-10px' : 'rounded-8px'"
     >
       <a
         :href="article.url"
@@ -30,7 +33,7 @@
       </span>
       <span class="i-tabler-ballpen ml-3px hover:"></span>
       <div class="w-100%"></div>
-      <div v-if="mode === 'Full'" class="m-8px ml-20px w-100%">
+      <div v-if="mode === 'Full'" class="m-8px ml-20px w-full">
         <p v-for="sentence in article.description" class="m-6px ml-0">
           <i>{{ sentence }}</i>
         </p>

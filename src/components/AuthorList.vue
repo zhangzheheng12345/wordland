@@ -1,6 +1,9 @@
 <template>
   <div class="slide-enter-content">
-    <div v-for="author in AUTHORS" class="list p-20px mb-20px rounded-10px">
+    <div
+      v-for="author in AUTHORS"
+      class="list p-20px mb-20px rounded-10px hover:shadow-lg"
+    >
       <h2 class="text-1.3em m-0 mb-5px">{{ author.cnName }}</h2>
       <div class="ml-10px flex flex-wrap">
         <span
