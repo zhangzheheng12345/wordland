@@ -42,7 +42,7 @@
     <a
       v-if="mode === 'Simple'"
       href="/words"
-      class="pushable all-articles-link transition-450 flex m-auto mt-33px mb-73px items-center justify-center max-w-110px rounded-10px p-5px text-#222"
+      class="pushable all-articles-link hover:shadow-lg transition-450 flex m-auto mt-33px mb-73px items-center justify-center max-w-110px rounded-10px p-5px text-#222"
     >
       <span>全部文章</span>
       <span class="ml-1px i-tabler-chevrons-right transition-160"></span>
