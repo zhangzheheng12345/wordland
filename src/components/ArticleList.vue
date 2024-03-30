@@ -15,7 +15,7 @@
   </div>
   <div class="slide-enter-content">
     <div
-      class="list p-10px pl-20px mb-20px items-center flex flex-wrap hover:shadow-lg"
+      class="list p-10px pl-20px mb-20px items-center flex flex-wrap hover:shadow-lg transition-180"
       v-for="article in articlesToShow"
       :class="mode === 'Full' ? 'rounded-10px' : 'rounded-8px'"
     >
@@ -31,7 +31,7 @@
       <span class="ml-8px">
         {{ article.author }}
       </span>
-      <span class="i-tabler-ballpen ml-3px hover:"></span>
+      <span class="i-tabler-ballpen ml-3px"></span>
       <div class="w-100%"></div>
       <div v-if="mode === 'Full'" class="m-8px ml-20px w-full">
         <p v-for="sentence in article.description" class="m-6px ml-0">
@@ -42,7 +42,7 @@
     <a
       v-if="mode === 'Simple'"
       href="/words"
-      class="pushable all-articles-link hover:shadow-lg transition-450 flex m-auto mt-33px mb-73px items-center justify-center max-w-110px rounded-10px p-5px text-#222"
+      class="pushable all-articles-link hover:shadow-lg transition-180 flex m-auto mt-33px mb-73px items-center justify-center max-w-110px rounded-10px p-5px text-#222"
     >
       <span>全部文章</span>
       <span class="ml-1px i-tabler-chevrons-right transition-160"></span>
