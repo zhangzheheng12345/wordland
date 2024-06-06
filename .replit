@@ -1,4 +1,16 @@
 run = "npm run dev"
+modules = ["nodejs-20", "vue-node-20", "web"]
 
 [nix]
-channel = "stable-22_11"
+channel = "stable-23_11"
+
+[deployment]
+run = ["sh", "-c", "npm run dev"]
+
+[[ports]]
+localPort = 3000
+externalPort = 3000
+
+[[ports]]
+localPort = 24678
+externalPort = 80
