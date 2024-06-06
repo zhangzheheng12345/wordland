@@ -9,7 +9,7 @@
   <div v-else class="flex items-center flex-nowrap mb-5px">
     <input
       v-model="searchWords"
-      class="w-full pushable focus:shadow-lg hover:shadow-lg"
+      class="w-full pushable focus:shadow-lg hover:shadow-lg transition-160"
     />
     <span class="i-tabler-search text-1.2em m-6px"></span>
   </div>
@@ -42,7 +42,7 @@
     <a
       v-if="mode === 'Simple'"
       href="/words"
-      class="pushable all-articles-link hover:shadow-lg transition-180 flex m-auto mt-33px mb-73px items-center justify-center max-w-110px rounded-10px p-5px text-#222"
+      class="pushable all-articles-link hover:shadow-lg transition-180 flex m-auto mt-33px mb-73px items-center justify-center max-w-110px rounded-10px p-5px text-very-dark-gray"
     >
       <span>全部文章</span>
       <span class="ml-1px i-tabler-chevrons-right transition-160"></span>
