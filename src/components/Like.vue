@@ -32,6 +32,7 @@ const likesCount = ref(0)
 const loaded = ref(false)
 
 const res = await getArticleLikes(props.name)
+likesCount.value = res ? res as number : 0
 
 onMounted(async () => {
   // Refresh toLike
@@ -40,7 +41,6 @@ onMounted(async () => {
     toLike.value = !toLike.value
   }, 0)
   loaded.value = true
-  likesCount.value = res ? res as number : 0
 })
 
 function toggle() {
