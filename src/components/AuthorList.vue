@@ -2,7 +2,7 @@
   <div class="slide-enter-content">
     <div
       v-for="author in AUTHORS"
-      class="list p-20px mb-20px rounded-10px hover:shadow-lg"
+      class="list p-20px mb-20px rounded-10px hover:shadow-lg transition-160"
     >
       <h2 class="text-1.3em m-0 mb-5px">{{ author.cnName }}</h2>
       <div class="flex flex-wrap m-10px">
