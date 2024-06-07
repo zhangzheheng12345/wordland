@@ -1,6 +1,6 @@
 <template>
   <div
-    class="pushable max-w-8em m-auto mt-4vh mb-7vh p-2px rounded-10px flex items-center justify-center cursor-pointer throttle transition-160 shadow-md hover:shadow-lg"
+    class="pushable max-w-8em m-auto mt-4vh mb-7vh p-2px rounded-10px flex items-center justify-center cursor-pointer throttle transition-220 shadow-md hover:shadow-lg"
     @click="toggle"
   >
     <span

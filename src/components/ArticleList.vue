@@ -11,7 +11,7 @@
       v-model="searchWords"
       class="w-full pushable focus:shadow-lg hover:shadow-lg transition-160"
     />
-    <span class="i-tabler-search text-1.2em m-6px"></span>
+    <span class="i-tabler-search text-1.2em m-6px hover:rotate-10 transition-160"></span>
   </div>
   <div class="slide-enter-content">
     <div
