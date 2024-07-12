@@ -31,7 +31,7 @@
       <span class="ml-8px">
         {{ article.author }}
       </span>
-      <span class="i-tabler-ballpen ml-3px"></span>
+      <span class="i-tabler-ballpen ml-3px transition-160 hover:rotate--15"></span>
       <div class="w-100%"></div>
       <div v-if="mode === 'Full'" class="m-8px ml-20px w-full">
         <p v-for="sentence in article.description" class="m-6px ml-0">
