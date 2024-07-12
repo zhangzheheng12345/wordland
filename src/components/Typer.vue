@@ -1,6 +1,6 @@
 <template>
   <br />
-  <p v-for="sentence in sentences">
+  <p v-for="sentence in sentences" @dblclick="typer">
     <i>{{ sentence }}</i>
   </p>
   <br />
@@ -17,8 +17,7 @@ const props = defineProps<{
 const processedSentences = props.sentences.split(' ')
 
 const sentences = ref(new Array(processedSentences.length).fill('|'))
-
-onMounted(async () => {
+const typer = async () => {
   for (let i = 0; i < sentences.value.length; i++) {
     for (let j = 0; j < processedSentences[i].length; j++) {
       if (j == 0) sentences.value[i] = processedSentences[i][0]
@@ -27,5 +26,7 @@ onMounted(async () => {
     }
     await sleep(140)
   }
-})
+}
+
+onMounted(typer)
 </script>
