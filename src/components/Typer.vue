@@ -31,3 +31,13 @@ const typer = async () => {
 
 onMounted(typer)
 </script>
+
+<style>
+/* no selection for better dbclick */
+p {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+</style>
